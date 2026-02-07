@@ -7,10 +7,7 @@ type Slide = {
   alt: string;
 };
 
-const slides: Slide[] = [
-  { src: '/IMG_7695.PNG', alt: 'Portrait' },
-  { src: '/test-scaled.jpg', alt: 'Speaking on stage' },
-];
+const slides: Slide[] = [{ src: '/beach-fixed.jpg', alt: 'Beach' }];
 
 export function PhotoCarousel() {
   const [index, setIndex] = useState(0);
@@ -26,13 +23,13 @@ export function PhotoCarousel() {
   }
 
   return (
-    <div className="relative w-full">
+    <div className="relative w-full group">
       <img
         src={current.src}
         alt={current.alt}
-        className="w-full h-auto rounded-md"
+        className="w-full h-auto"
       />
-      <div className="absolute bottom-3 right-3 flex items-center gap-2">
+      <div className="absolute bottom-3 right-3 flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
         <button
           type="button"
           onClick={prev}
