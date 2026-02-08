@@ -64,8 +64,10 @@ function Footer() {
             </a>
           ))}
         </div>
-        <div className="mt-3 text-sm text-gray-400">
-          PS: This was a little one hour experiment to try out vibe-coding tools! This site was forked from{' '}
+        <div className="mt-5 text-sm text-gray-400">
+          PS: This was a little one hour experiment to try out vibe-coding tools!
+          <br />
+          This site was forked from{' '}
           <a
             href="https://github.com/leerob/next-mdx-blog"
             target="_blank"
